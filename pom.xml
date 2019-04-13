@@ -36,6 +36,7 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--KOTLIN-->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
@@ -52,6 +53,8 @@
         <!--			<groupId>org.springframework.boot</groupId>-->
         <!--			<artifactId>spring-boot-starter-data-rest</artifactId>-->
         <!--		</dependency>-->
+
+        <!--Spring-Boot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -61,6 +64,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <!--		<dependency>-->
         <!--			<groupId>com.fasterxml.jackson.module</groupId>-->
         <!--			<artifactId>jackson-module-kotlin</artifactId>-->
