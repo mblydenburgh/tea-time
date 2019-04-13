@@ -1,0 +1,33 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <property name="u_id" value="uuid()" dbms="mysql" />
+    <changeSet author="mblydenburgh" id="initial sample data">
+        <createTable tableName="teas">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false" primaryKey="true" />
+            </column>
+            <column name="name" type="VARCHAR(255)" />
+            <column name="maker" type="VARCHAR(255)"/>
+            <column name="type" type="VARCHAR(255)"/>
+            <column name="caffeine" type="VARCHAR(255)"/>
+            <column name="rating" type="INT"/>
+        </createTable>
+        <insert tableName="teas">
+            <column name="id" value="f82dcf9a-4780-475e-afb1-efa0e61d49e0" />
+            <column name="name" value="Valarian Nights" />
+            <column name="maker" value="David's Tea" />
+            <column name="type" value="Black Tea" />
+            <column name="caffeine" value="high" />
+            <column name="rating" value="4" />
+        </insert>
+        <insert tableName="teas">
+            <column name="id" value="f5562f49-8dde-4fb5-81fc-4a236a10185a" />
+            <column name="name" value="Long Life Oolong" />
+            <column name="maker" value="David's Tea" />
+            <column name="type" value="Oolong Tea" />
+            <column name="caffeine" value="medium" />
+            <column name="rating" value="5" />
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

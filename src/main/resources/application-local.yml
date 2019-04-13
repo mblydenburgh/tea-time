@@ -1,0 +1,12 @@
+#SSL
+server.port: 8080
+server:
+  ssl:
+    enabled: false
+
+#SPRING
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/teaTime?createDatabaseIFNotExist=true&useSSL=false&serverTimezone=EST
+    username: root
+    password: UX303lb#

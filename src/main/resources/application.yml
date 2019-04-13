@@ -1,10 +1,17 @@
 server:
   port: 8080
 
-#TODO: figure out why I need this here and in bootstrap.yml
+# SPRING
 spring:
-  application:
-    name: testLatticeApp
+  liquibase:
+    change-log: classpath:/liquibase-changelog.xml
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 ribbon:
   ServerListRefreshInterval: 1000
